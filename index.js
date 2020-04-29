@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return `<div>
                 <img src="${currentMovie.Poster}">
                 <h2>${currentMovie.Title} (${currentMovie.Year})</h2>
-                <p>imdbID: ${currentMovie.imdbID}       <button>ADD</button></p>
-                
+                <button onclick="saveToWatchlist('${currentMovie.imdbID}')">ADD</button>
               </div>`
     });
+    
     return movieHtmlArray.join('');
+
   }
   // const movieContainer = document.querySelector('.movies-container');
   // movieContainer.innerHTML = renderMovies(movieData); // part 8 of step 2
@@ -20,3 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     movieContainer.innerHTML = renderMovies(movieData);
   });
 });
+
+function saveToWatchlist (imdbID) {
+  console.log(imdbID);
+}
