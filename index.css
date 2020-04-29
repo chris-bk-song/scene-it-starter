@@ -1,5 +1,5 @@
 body {
-	background-color: #B2E9FD;
+	background-color: rgb(35, 37, 40);
 }
 
 .header h2 {
@@ -14,3 +14,18 @@ body {
 	margin-top: 20px;
 }
 
+.movies-container {
+	display: block;
+	/* justify-content: space-between; */
+	/* background-color: rgb(61, 64, 67); */
+}
+
+/* .movie {
+	border: 1px solid red;
+} */
+
+button {
+	background-color: white;
+	color: rgb(35, 35, 35);
+	border-radius: 5px;
+}
