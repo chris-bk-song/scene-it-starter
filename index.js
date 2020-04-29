@@ -3,13 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
   function renderMovies(movieArray) {
     var movieHtmlArray = movieArray.map(function(currentMovie) {
       return `<div>
-                <h2>${currentMovie.Title}</h2>
                 <img src="${currentMovie.Poster}">
-              
+                <h2>${currentMovie.Title} (${currentMovie.Year})</h2>
+                <p>imdbID: ${currentMovie.imdbID}       <button>ADD</button></p>
+                
               </div>`
     });
     return movieHtmlArray.join('');
   }
-  const movieContainer = document.querySelector('.movies-container');
-  movieContainer.innerHTML = renderMovies(movieData);
+  // const movieContainer = document.querySelector('.movies-container');
+  // movieContainer.innerHTML = renderMovies(movieData); // part 8 of step 2
+  const myForm = document.getElementById('search-form');
+  myForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const movieContainer = document.querySelector('.movies-container');
+    movieContainer.innerHTML = renderMovies(movieData);
+  });
 });
