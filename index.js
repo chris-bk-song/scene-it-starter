@@ -24,4 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function saveToWatchlist (imdbID) {
   console.log(imdbID);
-}
+  const movie = movieData.find(function(currentMovie) {
+    return currentMovie.imdbID == imdbID;
+    });
+  let watchlistJSON = localStorage.getItem('watchlist');
+  let watchlist = JSON.parse(watchlistJSON);
+  if (watchlist === null) {
+    watchlist = [];
+  };
+  watchlist.push(movie);
+  watchlistJSON = JSON.stringify(watchlist);
+  localStorage.setItem('watchlist', watchlistJSON);
+};
