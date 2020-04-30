@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
               </div>`
     });
     
-    return movieHtmlArray.join('');
+    return movieHtmlArray.join(``);
 
   }
   // const movieContainer = document.querySelector('.movies-container');

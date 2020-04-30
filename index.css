@@ -49,3 +49,18 @@ button {
 	border-color: peru;
 	border-radius: 10px;
 }
+
+.links {
+	display: flex;
+	justify-content: center;
+}
+
+#link {
+	padding: 5px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+  color: black;
+  background-color: peru;
+  border: 1px solid peru;
+	border-radius: 10px;
+}
