@@ -1,3 +1,4 @@
+// still needs to create remove from saved list button
 const watchList = localStorage.getItem('watchlist');
 const savedWatchList = JSON.parse(watchList);
 
