@@ -1,3 +1,4 @@
+// This data is not used anymore after finishing part 2
 var movieData = [
 	{
 		Title: "The Dark Knight",

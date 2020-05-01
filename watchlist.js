@@ -3,8 +3,8 @@ const savedWatchList = JSON.parse(watchList);
 
 function renderMovies(movieArray) {
   var movieHtmlArray = movieArray.map(function(currentMovie) {
-    return `<div>
-              <img src="${currentMovie.Poster}">
+    return `<div class="box">
+              <img src="${currentMovie.Poster}" height="450" width="300">
               <h2>${currentMovie.Title} (${currentMovie.Year})</h2>
             </div>`
   });
